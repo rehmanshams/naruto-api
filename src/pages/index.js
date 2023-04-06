@@ -17,8 +17,8 @@ export default function Home() {
           <Model setCardmodel={setCardmodel} getstate={getstate} />
         )}
         <h1 className="text-white pl-2 py-4 text-3xl">Cards :-</h1>
-        <div className="p-2">
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+        <div className="p-2 flex justify-center">
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 transition-all ease-in-out duration-300">
             {getdata.map((item) => (
               <div className=" flex rounded-md relative">
                 <div className="flex">
@@ -27,7 +27,7 @@ export default function Home() {
                     src={item.images[0]}
                   />
                   <div
-                   className="w-[390px] h-[40px] getColor bg-slate-400 rounded-b-md absolute bottom-0 p-2 flex justify-between transition-all ease-in-out duration-300 helloone"
+                   className="w-full sm:w-[390px] h-[40px] getColor bg-slate-400 rounded-b-md absolute bottom-0 p-2 flex justify-between transition-all ease-in-out duration-300 helloone"
                    >
                     <p className="text-[#D8D3D3]">{item.name}</p>
                     <svg
